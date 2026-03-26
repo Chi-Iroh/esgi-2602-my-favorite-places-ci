@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "M1-T2 Docker - My Favorite Places",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
