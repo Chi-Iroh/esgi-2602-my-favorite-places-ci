@@ -1,4 +1,4 @@
-name: CI
+name: Run tests
 on: push
 jobs:
   build:
@@ -8,4 +8,4 @@ jobs:
     - name: Install modules
       run: npm install
     - name: Run tests
-      run: npx jest
+      run: npm run test
