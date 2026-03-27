@@ -1,6 +1,8 @@
 import express from "express";
 import apiRouter from "./router";
 
+// Comment to run GitHub actions
+
 const app = express();
 
 // use JSON for req.body
