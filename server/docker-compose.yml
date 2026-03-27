@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    networks:
+      - net
+    volumes:
+       - db-data:/var/lib/postgresql
+    environment:
+      POSTGRES_PASSWORD: supersecretpassword
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    networks:
+      - net
+
+  api:
+    build: .
+    networks:
+      - net
+    depends_on:
+      - db
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+
+networks:
+  net:
+    driver: bridge
+
+volumes:
+  db-data:
