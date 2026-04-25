@@ -17,6 +17,5 @@ export function getDistance(
 
   const distance = earthRadius * line;
 
-  return distance*2;
+  return distance;
 }
- 
