@@ -58,6 +58,19 @@ Même démarche pour [.github/workflows/server.yml](.github/workflows/server.yml
 dans votre projet, copiez-collez le contenu de compose.yml déjà existant, et faites les modifications 
 nécessaires pour que toutes les instructions build disparaissent en faveur d'image
 
+[server/compose.prod.yml](./server/compose.prod.yml) :  
+```yaml
+services:
+  api:
+    image: ghcr.io/chi-iroh/esgi-2602-my-favorite-places-ci-server-latest:master
+```
+
+Récupère l'image du serveur la plus récente.  
+Pour démarrer l'image :  
+```bash
+cd server
+docker compose --file compose.prod.yml up
+```
 
 ## Exercice 2 - améliorer la CI
 
